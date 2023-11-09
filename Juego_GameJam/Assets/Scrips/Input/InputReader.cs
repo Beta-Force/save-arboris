@@ -13,7 +13,9 @@ public class InputReader : ScriptableObject, GameInputs.IGameplayActions, GameIn
     #region Events
     //Gameplay
     public event UnityAction<Vector2> MoveEvent = delegate { };
-    public event UnityAction InteractEvent = delegate { };
+    public event UnityAction GrapStartedEvent = delegate { };
+    public event UnityAction GrapCanceledEvent = delegate { };
+    public event UnityAction AttackEvent = delegate { };
 
     //UI
     public event UnityAction<Vector2> UIMouseMoveEvent = delegate { };
@@ -54,10 +56,19 @@ public class InputReader : ScriptableObject, GameInputs.IGameplayActions, GameIn
         MoveEvent?.Invoke(context.ReadValue<Vector2>());
     }
     
-    public void OnInteract(InputAction.CallbackContext context)
+    public void OnGrap(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+            GrapStartedEvent?.Invoke();
+
+        if (context.phase == InputActionPhase.Canceled)
+            GrapCanceledEvent?.Invoke();
+    }
+
+    public void OnAttack(InputAction.CallbackContext context)
     {
         if (context.phase == InputActionPhase.Performed)
-            InteractEvent?.Invoke();
+            AttackEvent?.Invoke();
     }
 
     public void OnPause(InputAction.CallbackContext context)

@@ -8,29 +8,43 @@ public class Bloque : MonoBehaviour
     [SerializeField] LayerMask MascaraPiedra;
     [SerializeField] float distance;
 
+    [Header("Input")]
+    [SerializeField] private InputReader inputReader;
+
     Transform piedra;
-    
-    public void Update()
+
+    #region Subscribing To Events
+    private void OnEnable()
     {
-        Debug.DrawRay(transform.position, (vista.position - transform.position).normalized*distance);
-        if(Input.GetKey(KeyCode.E))
-        {
-            RaycastHit2D Hit = Physics2D.Raycast(transform.position, vista.position - transform.position,distance,MascaraPiedra);
-            Debug.Log(Hit == null);
-
-            if (Hit.transform != null && piedra == null && Hit.transform.CompareTag("Piedra"))
-            {
-                piedra = Hit.transform;
-                piedra.parent = transform;
-
-            }
-        }
-        else if(Input.GetKeyUp(KeyCode.E) && piedra!=null)
-        {
-            piedra.parent=null;
-            piedra = null;
-        }
-        
+        inputReader.GrapStartedEvent += OnGrapStarted;
+        inputReader.GrapCanceledEvent += OnGrabCanceled;
     }
 
+    private void OnDisable()
+    {
+        inputReader.GrapStartedEvent -= OnGrapStarted;
+        inputReader.GrapCanceledEvent -= OnGrabCanceled;
+    }
+    #endregion
+
+    void OnGrapStarted()
+    {
+        RaycastHit2D Hit = Physics2D.Raycast(transform.position, vista.position - transform.position, distance, MascaraPiedra);
+        //Debug.Log(Hit == null);
+
+        if (Hit.transform != null && piedra == null && Hit.transform.CompareTag("Piedra"))
+        {
+            piedra = Hit.transform;
+            piedra.parent = transform;
+        }
+    }
+
+    void OnGrabCanceled()
+    {
+        if(piedra != null)
+        {
+            piedra.parent = null;
+            piedra = null;
+        }
+    }
 }

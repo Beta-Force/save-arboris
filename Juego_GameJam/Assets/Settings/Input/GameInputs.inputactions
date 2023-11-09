@@ -15,7 +15,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Interact",
+                    "name": "Grap",
                     "type": "Button",
                     "id": "1e05782a-0106-4e6a-9047-56fe6f92fdea",
                     "expectedControlType": "Button",
@@ -27,6 +27,15 @@
                     "name": "Pause",
                     "type": "Button",
                     "id": "3a880b0a-c8a0-4c8a-86aa-379156f37a19",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "d7556d7c-5205-4364-a352-48dcd91f85d4",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -162,18 +171,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardAndMouse",
-                    "action": "Interact",
+                    "action": "Grap",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "43906726-ad3c-4821-b386-63d2fe1a3030",
-                    "path": "<Gamepad>/buttonWest",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Interact",
+                    "action": "Grap",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -196,6 +205,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2affba06-601b-4511-b989-ac6f66ba7a49",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "31bc4c9d-3e1a-40c5-87a0-94d2b20d2469",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
