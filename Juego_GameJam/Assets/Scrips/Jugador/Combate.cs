@@ -7,20 +7,8 @@ public class Combate : MonoBehaviour
     [SerializeField] private Transform controladorGolpe;
     [SerializeField] private float radioGolpe;
     [SerializeField] private float dañoGolpe;
-
-    [Header("Input")]
-    [SerializeField] private InputReader inputReader;
     private Animator animator;
-
-    private void OnEnable()
-    {
-        inputReader.AttackEvent += OnAttack;
-    }
-
-    private void OnDisable()
-    {
-        inputReader.AttackEvent -= OnAttack;
-    }
+    private BoxCollider2D colAtaque;
 
     void Start()
     {
@@ -57,7 +45,7 @@ public class Combate : MonoBehaviour
 
     private void Awake()
     {
-
+        colAtaque = GetComponent<BoxCollider2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -70,11 +58,6 @@ public class Combate : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
-
-    }
-
-    void OnAttack()
-    {
 
     }
 }

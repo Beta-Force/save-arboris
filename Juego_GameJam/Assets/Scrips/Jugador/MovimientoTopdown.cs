@@ -6,23 +6,10 @@ public class MovimientoTopdown : MonoBehaviour
 {
     [SerializeField] private float speed = 3f;
 
-    [Header("Input")]
-    [SerializeField] private InputReader inputReader;
-
     private Rigidbody2D rb2D;
     private Animator animator;
 
     private Vector2 moveInput;
-
-    private void OnEnable()
-    {
-        inputReader.MoveEvent += OnMove;
-    }
-
-    private void OnDisable()
-    {
-        inputReader.MoveEvent -= OnMove;
-    }
 
     void Start()
     {
@@ -45,11 +32,6 @@ public class MovimientoTopdown : MonoBehaviour
     private void FixedUpdate()
     {
         rb2D.MovePosition(rb2D.position + moveInput * speed * Time.fixedDeltaTime);
-    }
-
-    void OnMove(Vector2 _moveVec)
-    {
-
     }
 }
 
