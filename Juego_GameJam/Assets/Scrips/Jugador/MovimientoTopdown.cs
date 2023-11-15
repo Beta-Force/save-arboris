@@ -6,28 +6,15 @@ public class MovimientoTopdown : MonoBehaviour
 {
     [SerializeField] private float speed = 3f;
 
-    [Header("Input")]
-    [SerializeField] private InputReader inputReader;
-
-    private Rigidbody2D rb2D;
-    private Animator animator;
-
+    private Rigidbody2D playerRb;
     private Vector2 moveInput;
+    private Animator playerAnimator;
 
-    private void OnEnable()
-    {
-        inputReader.MoveEvent += OnMove;
-    }
-
-    private void OnDisable()
-    {
-        inputReader.MoveEvent -= OnMove;
-    }
 
     void Start()
     {
-        rb2D = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        playerRb = GetComponent<Rigidbody2D>();
+        playerAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -36,20 +23,14 @@ public class MovimientoTopdown : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
         moveInput = new Vector2(moveX, moveY).normalized;
 
-        // Actualizar la animación de movimiento
-        animator.SetFloat("Horizontal", moveInput.x);
-        animator.SetFloat("Vertical", moveInput.y);
-        animator.SetFloat("Speed", moveInput.magnitude);
+        playerAnimator.SetFloat("Horizontal", moveX);
+        playerAnimator.SetFloat("Vertical", moveY);
+        playerAnimator.SetFloat("Speed", moveInput.sqrMagnitude);
     }
 
     private void FixedUpdate()
     {
-        rb2D.MovePosition(rb2D.position + moveInput * speed * Time.fixedDeltaTime);
-    }
-
-    void OnMove(Vector2 _moveVec)
-    {
-
+        playerRb.MovePosition(playerRb.position + moveInput * speed * Time.fixedDeltaTime);
     }
 }
 
