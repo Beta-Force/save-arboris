@@ -15612,22 +15612,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1687452293893291492, guid: c2f419b8ba070df47a27c9e8ba791976, type: 3}
-      propertyPath: radioGolpe
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1687452293893291492, guid: c2f419b8ba070df47a27c9e8ba791976, type: 3}
-      propertyPath: inputReader
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2304085183434636988, guid: c2f419b8ba070df47a27c9e8ba791976, type: 3}
-      propertyPath: objectToDestroy
-      value: 
-      objectReference: {fileID: 1273504792}
-    - target: {fileID: 5358604680186888839, guid: c2f419b8ba070df47a27c9e8ba791976, type: 3}
-      propertyPath: inputReader
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7127506505932266982, guid: c2f419b8ba070df47a27c9e8ba791976, type: 3}
       propertyPath: m_Name
       value: Jugador
