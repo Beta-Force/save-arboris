@@ -4681,7 +4681,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 43.8, y: -23}
+  m_AnchoredPosition: {x: 43.80005, y: -23}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!1 &1025605923
@@ -6998,7 +6998,7 @@ Transform:
   m_GameObject: {fileID: 1468104510}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.3000007, y: 4.95, z: -10}
+  m_LocalPosition: {x: -6.3, y: 4.95, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8860,7 +8860,7 @@ Transform:
   m_GameObject: {fileID: 1957328561}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9253888, y: 1.8792002, z: -10}
+  m_LocalPosition: {x: -2.9241633, y: 1.8791997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15616,10 +15616,18 @@ PrefabInstance:
       propertyPath: radioGolpe
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1687452293893291492, guid: c2f419b8ba070df47a27c9e8ba791976, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2304085183434636988, guid: c2f419b8ba070df47a27c9e8ba791976, type: 3}
       propertyPath: objectToDestroy
       value: 
       objectReference: {fileID: 1273504792}
+    - target: {fileID: 5358604680186888839, guid: c2f419b8ba070df47a27c9e8ba791976, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7127506505932266982, guid: c2f419b8ba070df47a27c9e8ba791976, type: 3}
       propertyPath: m_Name
       value: Jugador
