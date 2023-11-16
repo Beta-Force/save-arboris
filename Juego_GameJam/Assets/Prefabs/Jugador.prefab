@@ -235,7 +235,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  inputReader: {fileID: 11400000, guid: 71be3c8e1816ff348952564b80c8fe07, type: 2}
 --- !u!50 &3179877181217068043
 Rigidbody2D:
   serializedVersion: 4
@@ -293,7 +292,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   distance: 1
-  inputReader: {fileID: 11400000, guid: 71be3c8e1816ff348952564b80c8fe07, type: 2}
 --- !u!114 &1687452293893291492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,7 +307,6 @@ MonoBehaviour:
   controladorGolpe: {fileID: 409220435857652344}
   radioGolpe: 0
   "da\xF1oGolpe": 10
-  inputReader: {fileID: 11400000, guid: 71be3c8e1816ff348952564b80c8fe07, type: 2}
 --- !u!70 &1401319282704072299
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
