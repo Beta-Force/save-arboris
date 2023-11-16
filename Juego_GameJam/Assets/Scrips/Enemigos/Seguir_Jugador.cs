@@ -29,7 +29,7 @@ public class Seguir_Jugador : MonoBehaviour
         Vector2 mono = Jugador.position;
         float longitud = (Posicion - mono).sqrMagnitude;
         animator.SetFloat("Idle", Distancia);
-            Debug.Log(transform.name+ " "+longitud);
+            //Debug.Log(transform.name+ " "+longitud);
         if(longitud<(Distancia*Distancia) )
         {
             Vector2 direccion = (Jugador.position - transform.position).normalized;
