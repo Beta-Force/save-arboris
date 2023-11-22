@@ -4473,6 +4473,11 @@ Transform:
   - {fileID: 586535343}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &981262131 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5168009779762988647, guid: c2f419b8ba070df47a27c9e8ba791976, type: 3}
+  m_PrefabInstance: {fileID: 773602191533016835}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1005507796
 GameObject:
   m_ObjectHideFlags: 0
@@ -15612,6 +15617,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1687452293893291492, guid: c2f419b8ba070df47a27c9e8ba791976, type: 3}
+      propertyPath: radioGolpe
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1687452293893291492, guid: c2f419b8ba070df47a27c9e8ba791976, type: 3}
+      propertyPath: controladorGolpe
+      value: 
+      objectReference: {fileID: 981262131}
     - target: {fileID: 7127506505932266982, guid: c2f419b8ba070df47a27c9e8ba791976, type: 3}
       propertyPath: m_Name
       value: Jugador
