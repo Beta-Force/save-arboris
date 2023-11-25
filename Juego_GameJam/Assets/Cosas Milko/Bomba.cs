@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem.iOS;
 
 public class Bomba : MonoBehaviour
 {
@@ -10,8 +12,16 @@ public class Bomba : MonoBehaviour
 
     [SerializeField] private GameObject EfectoExplosion;
 
+    [SerializeField] private float Velocidad;
+
+    [SerializeField] private float Daño;
+
+    [SerializeField] private float DañoBase;
+
     private void Update()
     {
+        transform.Translate(Vector2.up * Velocidad * Time.deltaTime);
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Explosion();
@@ -31,7 +41,6 @@ public class Bomba : MonoBehaviour
                 planta_Rota.Destruir();
             }
         }
-
         Collider2D[] objetos = Physics2D.OverlapCircleAll(transform.position, Radio);
 
         foreach (Collider2D colisionador in objetos)
@@ -43,11 +52,19 @@ public class Bomba : MonoBehaviour
                 float distancia = 1 + direccion.magnitude;
                 float FuerzaFinal = FuerzaExplosion / distancia;
                 rb2D.AddForce(direccion * FuerzaFinal);
+                float DañoFinal = DañoBase / distancia;
 
+                //calcula el daño basado en su distancia
+                if (colisionador.CompareTag("Enemigo"))
+                {
+                    //aplica el daño al obejto afectado
+                    colisionador.GetComponent<Enemigo>().TomarDaño(DañoFinal);
+                }
             }
         }
         Destroy(gameObject);
     }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
