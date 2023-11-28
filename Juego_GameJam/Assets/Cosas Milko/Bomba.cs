@@ -21,7 +21,7 @@ public class Bomba : MonoBehaviour
     private void Update()
     {
         transform.Translate(Vector2.up * Velocidad * Time.deltaTime);
-
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Explosion();
