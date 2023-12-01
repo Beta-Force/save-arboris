@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 8323800971834760403}
   - component: {fileID: 5024200067197325383}
   - component: {fileID: 3367109241137284227}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: hoyo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
