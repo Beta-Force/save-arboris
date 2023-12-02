@@ -46,7 +46,6 @@ public class MovimientoTopdown : MonoBehaviour
     void OnMove(Vector2 _moveVec)
     {
         moveInput = _moveVec;
-        print(_moveVec);
     }
 
     void OnMovePerformed(Vector2 _moveDir)
