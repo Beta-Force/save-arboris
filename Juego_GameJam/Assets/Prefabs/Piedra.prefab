@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1026662824229859974}
   - component: {fileID: 8810975973404336754}
   - component: {fileID: 7296439792411950731}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Piedra
   m_TagString: Piedra
   m_Icon: {fileID: 0}
