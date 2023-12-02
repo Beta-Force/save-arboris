@@ -27,15 +27,6 @@ public class Combate : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Golpe();
-            animator.SetTrigger("Atacar");
-        }
-    }
-
     private void Golpe()
     {
         Collider2D[] objetos = Physics2D.OverlapCircleAll(controladorGolpe.position, radioGolpe);
@@ -46,6 +37,10 @@ public class Combate : MonoBehaviour
             {
                 collisionador.transform.GetComponent<Enemigo>().TomarDaño(dañoGolpe);
             }
+            if (collisionador.CompareTag("Basura"))
+            {
+                Destroy(collisionador.gameObject);
+            }
         }
     }
 
@@ -55,26 +50,9 @@ public class Combate : MonoBehaviour
         Gizmos.DrawSphere(controladorGolpe.position, radioGolpe);
     }
 
-    private void Awake()
-    {
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.CompareTag("Enemigo"))
-        {
-            Destroy(other.gameObject);
-        }
-        else if(other.CompareTag("Basura"))
-        {
-            Destroy(other.gameObject);
-        }
-
-    }
-
     void OnAttack()
     {
-
+        Golpe();
+        animator.SetTrigger("Atacar");
     }
 }

@@ -13,15 +13,18 @@ public class MovimientoTopdown : MonoBehaviour
     private Animator animator;
 
     private Vector2 moveInput;
+    private Vector2 animMoveInput;
 
     private void OnEnable()
     {
         inputReader.MoveEvent += OnMove;
+        inputReader.MoveEventPerformed += OnMovePerformed;
     }
 
     private void OnDisable()
     {
         inputReader.MoveEvent -= OnMove;
+        inputReader.MoveEventPerformed -= OnMovePerformed;
     }
 
     void Start()
@@ -32,26 +35,24 @@ public class MovimientoTopdown : MonoBehaviour
 
     void Update()
     {
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
-        moveInput = new Vector2(moveX, moveY).normalized;
-
-       
-
-        // Actualizar la animación de movimiento
-        animator.SetFloat("Horizontal", moveInput.x);
-        animator.SetFloat("Vertical", moveInput.y);
         animator.SetFloat("Speed", moveInput.magnitude);
     }
 
     private void FixedUpdate()
     {
-        rb2D.MovePosition(rb2D.position + moveInput * speed * Time.fixedDeltaTime);
+        rb2D.velocity = new Vector2(moveInput.x * speed * 50f, moveInput.y * speed * 50f) * Time.fixedDeltaTime;
     }
 
     void OnMove(Vector2 _moveVec)
     {
+        moveInput = _moveVec;
+        print(_moveVec);
+    }
 
+    void OnMovePerformed(Vector2 _moveDir)
+    {
+        animator.SetFloat("Horizontal", _moveDir.x);
+        animator.SetFloat("Vertical", _moveDir.y);
     }
 }
 
