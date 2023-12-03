@@ -308,21 +308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piedra
       objectReference: {fileID: 0}
-    - target: {fileID: 2276969080519860620, guid: e8774b739f177624885d279c2db785c0, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7296439792411950731, guid: e8774b739f177624885d279c2db785c0, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2276969080519860620, guid: e8774b739f177624885d279c2db785c0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1998989054}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8774b739f177624885d279c2db785c0, type: 3}
 --- !u!1001 &899690401
 PrefabInstance:
@@ -334,11 +323,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 409220435857652344, guid: c2f419b8ba070df47a27c9e8ba791976, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.4
       objectReference: {fileID: 0}
     - target: {fileID: 409220435857652344, guid: c2f419b8ba070df47a27c9e8ba791976, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.61
       objectReference: {fileID: 0}
     - target: {fileID: 409220435857652344, guid: c2f419b8ba070df47a27c9e8ba791976, type: 3}
       propertyPath: m_LocalPosition.z
@@ -547,11 +536,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3681890106057322847, guid: 25a53085ec91a1e479032aeacc5d0f2e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00000023841858
+      value: 3.3999999
       objectReference: {fileID: 0}
     - target: {fileID: 3681890106057322847, guid: 25a53085ec91a1e479032aeacc5d0f2e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00000011920929
+      value: 1.6100001
       objectReference: {fileID: 0}
     - target: {fileID: 3681890106057322847, guid: 25a53085ec91a1e479032aeacc5d0f2e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2725,38 +2714,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a58ba64a11b2db4da97cfdac076c0fc, type: 3}
---- !u!1 &1998989046 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2276969080519860620, guid: e8774b739f177624885d279c2db785c0, type: 3}
-  m_PrefabInstance: {fileID: 716948921}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &1998989054
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1998989046}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &2032517758 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3049528081557536366, guid: 2a58ba64a11b2db4da97cfdac076c0fc, type: 3}

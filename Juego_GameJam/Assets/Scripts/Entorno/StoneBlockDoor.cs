@@ -16,7 +16,7 @@ public class StoneBlockDoor : MonoBehaviour, IDoor
     {
         coll2D = GetComponent<Collider2D>();
 
-        if (startOpen) OpenDoor();
+        if (startOpen) { OpenDoor(); } else { CloseDoor(); }
     }
 
     public void CloseDoor()
