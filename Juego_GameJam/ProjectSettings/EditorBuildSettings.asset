@@ -8,11 +8,17 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/Men\xFA.unity"
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Juego.unity
     guid: ddc3ce8e3e2746c4bbaa7a8578691203
   - enabled: 0
     path: Assets/Scenes/Nivel 2.unity
     guid: ee637f2dfbeca5a4381b2550b326b434
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 286ea36c2fbdcab4f8984abfb6a81321
+  - enabled: 1
+    path: Assets/Scenes/Nivel 1 - VY.unity
+    guid: d83acd9f215ae73469ff1b7dfe6bc03d
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 1b04c85c31358d848a90aed3262efe57, type: 2}
