@@ -4,18 +4,21 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Key
   - Piedra
-  - Enemigo
+  - Bavi
+  - Hoyo
+  - Referencia
+  - Maceta
   - Basura
+  - Enemigo
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Pusheable
+  - 
   - Water
   - UI
-  - Player
+  - 
   - 
   - 
   - 
